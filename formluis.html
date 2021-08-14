@@ -2,44 +2,44 @@
 <html>
 <head></head>
 <body>
-   <h1><b>Formulario</b></h1>
+   <h1><b>Datos personales</b></h1>
    <br>
-    <form action="http://localhost/projects/form.php" method="POST">
+    <form action="http://localhost/projects/form.php" method="GET">
    <label> <h3>Nombre</h3></label>
-   <input type="text" name="nombre"/>
+   <input type="text" id="name" name="nombre"/>
    <br>
    <label><h3> Apellido</h3> </label>
-   <input type="text" name="apellido"/>
+   <input type="text" id="lastname" name="apellido"/>
    <br>
    <label><h3> Fecha de nacimiento </h3></label>
-   <input type="number" name="dia" min="1"  max="31" placeholder="Día"/>
-   <input type="number" name="mes" min="1" max="12" placeholder="Mes"/>
-   <input type="number" name="anio" min="1900" max="2021" placeholder="Anio"/>
+   <input type="number" id="born" name="dia" min="1"  max="31" placeholder="Dia"/>
+   <input type="number" id="born" name="mes" min="1" max="12" placeholder="Mes"/>
+   <input type="number" id="born" name="anio" min="1900" max="2021" placeholder="Anio"/>
    
    <br>
    <label> <h4>Si usted es +18, ingresar su cedula o pasaporte </h4></label>
-     <select name="dni" id="">
+     <select name="dni" id="dni">
        <option selected> DNI</option>
        <option value="V">V</option>
        <option value="P">P</option>
        </select>
-    <input type="text" name="no" placeholder="00.000.000">
+    <input type="text" id="number" name="no" placeholder="00.000.000">
     <br>
     <label> <h3> Genero </h3> </label>
      <br>
-    <input type="radio" name="genero" value="masculino"> Masculino <br>
-       <input type="radio" name="genero" value="femenino"> Femenino <br>
-       <input type="radio" name="genero" value="nobi"> No binario <br>
-       <input type="radio" name="genero" value="node"> Prefiero no decir <br>
+    <input type="radio" id="m" name="genero" value="masculino"> Masculino <br>
+       <input type="radio" id="f" name="genero" value="femenino"> Femenino <br>
+       <input type="radio" id="nb" name="genero" value="nobi"> No binario <br>
+       <input type="radio" id="pnd" name="genero" value="node"> Prefiero no decir <br>
        <br>
     <label><h3>Telefono</h3></label>
-     <select name="tlf"  id="">
+     <select name="tlf"  id="tlf">
            <option selected name="tlf"> Selecciona</option>
            <option value="TLF" name="tlf">TLF</option>
            <option value="FIJO" name="tlf">FIJO</option>
              </select>
-    <label><h3> Código</h3> </label>
-      <select name="codigo" id="">
+    <label><h3> Codigo</h3> </label>
+      <select name="codigo" id="code">
         <option selected> ... </option>
         <option value="0414" >0414-</option>
         <option value="0424" >0424-</option>
@@ -48,10 +48,54 @@
         <option value="0412" >0412-</option>
         <option value="02" >0274-</option>
         </select>
-        <label><h3> Número</h3></label>  
-        <input type="text" name="numerotlf" placeholder="000.00.00">
+        <label><h3> Numero</h3></label>  
+        <input type="text" id="ntlf" name="numerotlf" placeholder="000.00.00">
         <br>            
-    <input type="submit" value="click!" >
-    </form>
+    
+
+    
+    <h1><b> Trabajos </b></h1>
+    <br>
+    <label><h3>Nombre de la empresa</h3></label>
+    <input type="text" id="ne" name="nombreempresa"  >
+    <br>
+    <label><h3>Fecha de inicio en la empresa</h3></label>
+    <input type="number" id="borne" name="month" min="1" max="12" placeholder="Mes"/>
+    <input type="number" id="borne" name="year" min="1900" max="2021" placeholder="Anio"/>
+   <br>
+   <label><h3>Fecha de salida de la empresa</h3></label>
+    <input type="number" id="borne" name="monthh" min="1" max="12" placeholder="Mes"/>
+    <input type="number" id="borne" name="yearr" min="1900" max="2021" placeholder="Anio"/>
+   <br>
+   <label><h3>Puesto ocupado</h3></label>
+   <input type="text" id="cargo" name="puestoocupado"/>
+   <br>
+   <label><h3> Descripcion del trabajo realizado</h3></label>
+   <textarea name="descripcion" rows="10" cols="40">Has una breve Descripcion</textarea>
+  <br>
+
+
+  <h1><b>Educacion</b></h1>
+  <br>
+  <label><h3> Nombre de la institucion</h3></label>
+  <input type="text" id="inst" name="institucion">
+  <br>
+  <label><h3>Fecha de ingreso</h3></label>
+    <input type="number" id="borne" name="luis" min="1" max="12" placeholder="Mes"/>
+    <input type="number" id="borne" name="felipe" min="1900" max="2021" placeholder="Anio"/>
+   <br>
+  <label><h3>Fecha de egreso</h3></label>
+    <input type="number" id="borne" min="1" max="12" name="maria" placeholder="Mes">
+    <input type="number" id="borne" min="1900" max="2021" name="fernanda" placeholder="Anio">
+   <br>
+  <label><h3>Nivel educativo obtenido </h3></label>
+  <input type="text" id="nivel" name="nivel">
+  <br>
+
+  <input type="submit" value="enviar">
+
+
+</form>
+
 </body>
 </html>
